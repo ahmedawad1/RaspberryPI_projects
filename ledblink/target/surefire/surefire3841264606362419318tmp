@@ -1,0 +1,29 @@
+#surefire
+#Tue May 31 09:28:49 CEST 2016
+testClassesDirectory=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\test-classes
+classPathUrl.4=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-gpio-extension\\1.0\\pi4j-gpio-extension-1.0.jar
+classPathUrl.3=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-device\\1.0\\pi4j-device-1.0.jar
+classPathUrl.2=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-core\\1.0\\pi4j-core-1.0.jar
+useManifestOnlyJar=true
+classPathUrl.1=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\classes
+reportsDirectory=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\surefire-reports
+classPathUrl.0=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\aawad\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.7.1\\surefire-api-2.7.1.jar
+surefireClassPathUrl.0=C\:\\Users\\aawad\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.7.1\\surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+enableAssertions=true
+includes2=**/*TestCase.java
+failIfNoTests=false
+includes1=**/*Test.java
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+includes0=**/Test*.java
+childDelegation=false

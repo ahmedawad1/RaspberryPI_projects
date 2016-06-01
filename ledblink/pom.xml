@@ -1,50 +1,87 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>big</groupId>
-  <artifactId>ledblink</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-<parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.4.RELEASE</version>
-    </parent>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	
+    <groupId>org.calpilot</groupId>
+    <!-- 3 comments are found inside this file  -->
+    <!-- 1- you can always change the name inthe artifactId attribute and the 
+    output jar file will be the name provided
+      -->
+    <artifactId>Blinkled</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Testing Pi4J and Maven</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <pi4j.version>0.0.5</pi4j.version>
+        <compiler-plugin.version>3.1</compiler-plugin.version>
+        <assembly-plugin.version>2.4</assembly-plugin.version>
+    </properties>
+
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+    
+    <!-- 2- it is the pi4j dependency as soon you include it, you can notice that maven will fetch them automaticalley and include 
+    them in the Maven Dependencies directory
+    Also other dependencies can be included in this section   -->
         <dependency>
             <groupId>com.pi4j</groupId>
             <artifactId>pi4j-core</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.pi4j</groupId>
-            <artifactId>pi4j-device</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.pi4j</groupId>
-            <artifactId>pi4j-gpio-extension</artifactId>
-            <version>1.0</version>
+            <version>${pi4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.pi4j</groupId>
+                    <artifactId>pi4j-native</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${assembly-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>
+                                    jar-with-dependencies
+                                </descriptorRef>
+                            </descriptorRefs>
+                            <archive>
+                                <manifest>
+                                <!-- 3- here it is important to point the pom attribute element to the 
+                                main java class such as in this project it is ControlGpioExample located in
+                                package bigdutchman  -->
+                                
+                                    <mainClass> 
+                                        bigdutchman.ControlGpioExample
+                                    </mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
-
-    
 </project>

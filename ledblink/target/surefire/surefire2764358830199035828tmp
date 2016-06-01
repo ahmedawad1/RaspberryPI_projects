@@ -1,9 +1,7 @@
 #surefire
-#Tue May 31 09:28:49 CEST 2016
+#Wed Jun 01 08:15:21 CEST 2016
 testClassesDirectory=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\test-classes
-classPathUrl.4=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-gpio-extension\\1.0\\pi4j-gpio-extension-1.0.jar
-classPathUrl.3=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-device\\1.0\\pi4j-device-1.0.jar
-classPathUrl.2=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-core\\1.0\\pi4j-core-1.0.jar
+classPathUrl.2=C\:\\Users\\aawad\\.m2\\repository\\com\\pi4j\\pi4j-core\\0.0.5\\pi4j-core-0.0.5.jar
 useManifestOnlyJar=true
 classPathUrl.1=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\classes
 reportsDirectory=C\:\\Users\\aawad\\workspace\\workspace_juno\\ledblink\\target\\surefire-reports

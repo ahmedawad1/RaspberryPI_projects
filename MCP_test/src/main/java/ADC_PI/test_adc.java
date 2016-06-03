@@ -19,7 +19,7 @@
  * 3- execute the jar file using 
  * "sudo java -jar MCP3424_adc-1.0-SNAPSHOT-jar-with-dependencies.jar"  note: Java JDK must be installed on the Raspberry (JDK7 or 8 recommended)
  * 
- * **********************************************************************
+ * ********************************************************************** 
  * The project depends on the pi4j library and Maven in java 
  * www.pi4j.com    www.maven.apache.org
  *   _______________________________________________________________________

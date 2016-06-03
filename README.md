@@ -16,4 +16,4 @@ The project is based on pi4j library and Maven3.3.9
 
 more information visit: 
 the ADC Pi Plus https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
-the original C-Demo https://github.com/abelectronicsuk/ABElectronics_C_Libraries/tree/master/ADCPi
+<be>the original C-Demo https://github.com/abelectronicsuk/ABElectronics_C_Libraries/tree/master/ADCPi

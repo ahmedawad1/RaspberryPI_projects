@@ -24,6 +24,7 @@ public class GreetingController {
     	
     	if (pin == null) {
     		// for the led provision visit http://pi4j.com/pins/model-2b-rev1.html
+    		// GPIO_02 is pin number 13 
             GpioController gpio = GpioFactory.getInstance();
             pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "MyLED", PinState.LOW);
         }

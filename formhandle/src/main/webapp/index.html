@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>  
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+
+		<button type="button" id="button1">Turn ON/Off the LED</button>
+		
+		<p> The Led status now is </p> <p id="par"></p>
+		
+		
+		<input type="text" name="switch_status">
+		
+		<form action="api/greeting" method="post" id="usrform">
+		Name: <input type="text" name="name"><br>
+		E-mail: <input type="text" name="email"><br>
+		<input type="button" value="Submit" id="btnsubmit" onclick="submitForm()">
+		</form>
+		
+		<script type="text/javascript">
+		
+		function submitForm() {
+			 var frm= document.getElementyId("usrform");
+			 frm.submit(); // Submit
+		 }
+		</script>
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

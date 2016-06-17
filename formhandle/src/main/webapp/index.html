@@ -11,7 +11,7 @@
 		<p> The Led status now is </p> <p id="par"></p>
 		
 		
-		<input type="text" name="switch_status">
+		<p> The switch status now is </p> <p id="switch1"></p>
 		
 		<form action="api/greeting" method="post" id="usrform">
 		Name: <input type="text" name="name"><br>
@@ -22,9 +22,22 @@
 		<script type="text/javascript">
 		
 		function submitForm() {
-			 var frm= document.getElementyId("usrform");
+			 var frm= document.getElementById("usrform");
 			 frm.submit(); // Submit
 		 }
+		
+		function updateTime(){
+			
+			$.ajax("/api", {
+		        dataType: "text",
+		        success: function(data, textStatus) {
+		        	document.getElementById("switch1").innerHTML=data;
+		        }
+		    });
+			
+		}
+		
+		setInterval(updateTime, 150);
 		</script>
 		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -14,8 +14,5 @@
 		      document.getElementById("par").innerHTML=res;
 		    }
 		 
-		 function submitForm() {
-			 var frm= document.getElementyId("usrform");
-			 frm.submit(); // Submit
-		 }
+		 
 		});
